@@ -34,7 +34,7 @@ public class ExchangeRateClientTests {
         LocalDate date = LocalDate.now().minusDays(5);
 
         // when
-        var result = client.getByDate(date.toString());
+        var result = client.getByDate(date);
 
         // then
         assertEquals(date, result.getDate());
