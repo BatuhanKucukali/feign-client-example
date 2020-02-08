@@ -17,5 +17,5 @@ public interface ExchangeRateClient {
     ExchangeRate getByDate(@PathVariable("date") String date);
 
     @GetMapping(value = "/latest")
-    ExchangeRate getByBase(@RequestParam(value = "base") Currency currency);
+    ExchangeRate getByBaseCurrency(@RequestParam(value = "base") Currency currency);
 }

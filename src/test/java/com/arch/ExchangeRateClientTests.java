@@ -48,7 +48,7 @@ public class ExchangeRateClientTests {
         Currency currency = Currency.getInstance("USD");
 
         // when
-        var result = client.getByBase(currency);
+        var result = client.getByBaseCurrency(currency);
 
         // then
         assertEquals(LocalDate.now().minusDays(1), result.getDate());
@@ -63,6 +63,6 @@ public class ExchangeRateClientTests {
         Currency currency = Currency.getInstance("KPW");
 
         // when & then
-        Assertions.assertThrows(CurrencyNotFoundException.class, () -> client.getByBase(currency));
+        Assertions.assertThrows(CurrencyNotFoundException.class, () -> client.getByBaseCurrency(currency));
     }
 }
