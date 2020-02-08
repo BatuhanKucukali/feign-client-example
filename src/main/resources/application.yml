@@ -24,4 +24,4 @@ feign:
 logging:
   level:
     com.arch:
-      ExchangeRateService: DEBUG
+      ExchangeRateClient: DEBUG
