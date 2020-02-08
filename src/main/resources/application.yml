@@ -1,0 +1,27 @@
+# Feign
+feign:
+
+  # Client
+  client:
+    config:
+      exchange-rate:
+        url: https://api.exchangeratesapi.io
+        connectTimeout: 5000
+        readTimeout: 5000
+        loggerLevel: full
+        errorDecoder: com.arch.ExchangeRateClientErrorDecoder
+        requestInterceptors:
+          - com.arch.ExchangeRateClientInterceptor
+
+  # Compression
+  compression:
+    request:
+      enabled: true
+    response:
+      enabled: true
+
+# Logging
+logging:
+  level:
+    com.arch:
+      ExchangeRateService: DEBUG
